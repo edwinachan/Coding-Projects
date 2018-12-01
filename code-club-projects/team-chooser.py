@@ -1,6 +1,6 @@
+#https://codeclubprojects.org/en-GB/python/team-chooser/
+
 from random import choice
-
-
 
 #Create a list of players
 
