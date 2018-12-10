@@ -17,7 +17,7 @@ new = 'jRidkgLPfgwosh'
 
 def get_middle(s):
     if len(s) % 2 == 0:
-    #Be sure to do integer division. Using a single '/' gives a floating
+    #Be sure to do integer division. Using a single '/' gives a floating point
         return s[len(s)//2] + s[(len(s)//2)-1]
     elif len(s) % 2 == 1:
         return s[(len(s) - 1)//2]
