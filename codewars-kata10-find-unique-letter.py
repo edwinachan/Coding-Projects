@@ -13,7 +13,7 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def find_missing_letter(chars):
-    lowerCase = [x.lower() for x in chars]
+    lowerCase = [x.lower() for x in chars] #Use list comprehension to convert to lower case
 
     lower = lowerCase[0] #define the 'smallest' letter
     lowerInAlpha = alphabet.index(lower) #this gives the position of the smallest letter in the alphabet
