@@ -12,3 +12,10 @@ def find_uniq(arr):
         return arr[len(arr)-1]
     elif arr[0] != arr[1]:
         return arr[0]
+
+#An more elegant method:    
+def find_uniq(arr):
+    s = set(arr)
+    for e in s:
+        if arr.count(e) == 1:
+            return e
