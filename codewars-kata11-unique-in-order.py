@@ -24,3 +24,15 @@ def unique_in_order(s):
         elif s[i] != s[i-1]:
             newList.append(s[i])
     return newList
+
+#A bit more elegant:
+
+def unique_in_order(s):
+    newList = []
+
+    for i in s:
+        if newList == []:
+            newList.append(i)
+        elif newList[-1] != i:
+            newList.append(i)
+    return newList
