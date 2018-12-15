@@ -14,7 +14,9 @@ def unique_in_order(s):
     if s == []:
         return s #Be able to handle empty lists
     
-    newList.append(s[0]) #As we're moving from left to right, populating new list with first value gives us something to compare to
+    newList.append(s[0]) #As we're moving from left to right, the first value in s will always be valid
+                        #This also gives us something to compare to on the 'left hand side'
+                        #It means i in the loop variable will look at the previous value and won't go out of range
 
     for i in range(1,len(s)):
         if s[i] == s[i-1]: #As we've appended s[0], we are able to look backwards to compare
