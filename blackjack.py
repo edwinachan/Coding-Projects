@@ -95,4 +95,5 @@ while(game != 'exit'):
     else:
         print('Dealer wins!')
         print('Dealer has: ', str(dealer), ' or ', str(dealerCount), ' points')
+        print('Player has: ', str(playerCount), ' points')
         break
