@@ -26,7 +26,17 @@ def first_non_repeating_letter(string):
             count += 1
             if count == ((len(stringLower)+1)//2):
                 return ''
-            
+
+#Less confusingly, after realising that stringLower[i] == 1 is the only case we need to account for and the rest should return '':
+
+def first_non_repeating_letter(string):
+
+    stringLower = string.lower()
+
+    for i in range(len(string)):
+        if stringLower.count(stringLower[i]) == 1:
+            return string[i]
+    return ''
   
 #Test cases
 #Test.describe('Basic Tests')
