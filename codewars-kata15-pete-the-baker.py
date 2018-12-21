@@ -23,6 +23,8 @@ def cakes(recipe, available):
     intersection = recipeKeys.intersection(recipeAvailable)
     print(sorted(intersection))
     print(sorted(recipeKeys))
+    
+    return sorted(intersection) == sorted(recipeKeys)
 
     if sorted(intersection) != sorted(recipeKeys):
         return 0 #Why does this return 0 for the above dictionaries?
