@@ -33,3 +33,10 @@ def kebabize(string):
     splitReunitedLower = splitReunited.lower()
 
     return splitReunitedLower
+
+#More elegantly:
+
+def kebabize1(s):
+    s = ''.join([i for i in s if not i.isdigit()])
+    kebablist = filter(None, re.split("([A-Z][^A-Z]*)", s))
+    return "-".join(x.lower() for x in kebablist)
