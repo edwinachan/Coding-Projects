@@ -26,3 +26,12 @@ def rot13(message):
         else:
             newMessage += letter
     return newMessage
+
+#More elegantly:
+
+import string
+
+def rot13(message):
+  first = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+     trance = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+  return message.translate(string.maketrans(first, trance))  
