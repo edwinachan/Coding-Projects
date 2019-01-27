@@ -19,3 +19,4 @@ def make_readable(seconds):
     minutes = secondsRemainingForMinutes // 60
     secondsRemaining = secondsRemainingForMinutes % 60
     return str(hours).zfill(2) + ':' + str(minutes).zfill(2) + ':' + str(secondsRemaining).zfill(2)
+    # return '{:02}:{:02}:{:02}'.format(hours, minutes, secondsRemaining) 
