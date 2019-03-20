@@ -95,6 +95,9 @@ class Player:
                     return True
                 else:
                     return False
+            else:
+                print('No match was made, next player will go.\n')
+                return False
 
     def __str__(self):
         s = ""
@@ -130,4 +133,3 @@ discardPile.append(myDeck.pop()) #Putting this right after we've dealt
 #the cards as we only want to pop from myDeck at the start of the game
 game = Game()
 game.playGame()
-
