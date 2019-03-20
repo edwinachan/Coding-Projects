@@ -1,7 +1,6 @@
 import random
 
 initalHandSize = 2
-numberOfPlayers = 3
 
 class Card:
 
