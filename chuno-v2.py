@@ -112,6 +112,7 @@ class Game:
         while won == False:
             playerGoing = (playerGoing + 1) % len(players)
             print(str(players[playerGoing].name) + " is going")
+            #print(str(players[playerGoing].name) + " has:\n" + str(players[playerGoing]))
             print(str(players[playerGoing].name) + " has:\n")
             playersHand = players[playerGoing].hand
             listOfCards = [str(i+1) + ': ' + str(playersHand[i]) + '\n' for i in range(len(playersHand))]
@@ -123,6 +124,7 @@ class Game:
             
 
 #Play the game
+print('Welcome to Chuno! The rules of the game are simple, and pretty much identical to Uno.\n 1) The aim of the game is to get rid of all your cards!\n 2) Each player starts with two cards in their hand. \n 3) You can play if a card in your hand matches the a) colour or b) number of the top card on the discard pile. Doing so removes the card from your hand. \n 4) If you can\'t go, you must pick up a card from the deck. \n 5) Repeat until someone\'s hand is empty. \nHave fun!\n') 
 numPlayers = int(input('How many players are there? '))
 players = []      
 myDeck = Deck()
