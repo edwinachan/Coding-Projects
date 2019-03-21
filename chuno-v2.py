@@ -55,10 +55,8 @@ class Deck:
                 players[j].addCardToHand(self.cards.pop())
     
     def createPlayers(self, numOfPlayers):
-        count = 1
         for i in range(1, numOfPlayers + 1):
-            players.append(Player(input('Name player ' + str(count) + ': ')))
-            count += 1
+            players.append(Player(input('Name player ' + str(i) + ': ')))
         print('\n')
         
             
@@ -114,7 +112,11 @@ class Game:
         while won == False:
             playerGoing = (playerGoing + 1) % len(players)
             print(str(players[playerGoing].name) + " is going")
-            print(str(players[playerGoing].name) + " has:\n" + str(players[playerGoing]))
+            #print(str(players[playerGoing].name) + " has:\n" + str(players[playerGoing]))
+            print(str(players[playerGoing].name) + " has:\n")
+            playersHand = players[playerGoing].hand
+            listOfCards = [str(i+1) + ': ' + str(playersHand[i]) + '\n' for i in range(len(playersHand))]
+            print(''.join(listOfCards))
             won = players[playerGoing].haveGo(myDeck)
             #Needs to return True in order to break out of while loop
             if won == True:
