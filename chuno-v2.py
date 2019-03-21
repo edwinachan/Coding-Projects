@@ -112,7 +112,6 @@ class Game:
         while won == False:
             playerGoing = (playerGoing + 1) % len(players)
             print(str(players[playerGoing].name) + " is going")
-            #print(str(players[playerGoing].name) + " has:\n" + str(players[playerGoing]))
             print(str(players[playerGoing].name) + " has:\n")
             playersHand = players[playerGoing].hand
             listOfCards = [str(i+1) + ': ' + str(playersHand[i]) + '\n' for i in range(len(playersHand))]
